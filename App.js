@@ -16,12 +16,7 @@ export default function App({ }) {
     />
   })
 
-  const [arr, setarr] = useState([
-    // { job: "pray", time: "7:30 am", id: 1, apear: true },
-    // { job: "college", time: "9:00 am", id: 2, apear: true },
-    // { job: "music", time: "3:00 am", id: 3, apear: true },
-    // { job: "language", time: "5:00 am", id: 4, apear: true },
-  ])
+  const [arr, setarr] = useState([])
 
   const [show, setshow] = useState(false)
   const [show2, setshow2] = useState(false)
@@ -40,7 +35,6 @@ export default function App({ }) {
 
 
   async function Select() {
-    // await AsyncStorage.setItem("storedArray", "[]")
     let valueOfAsync = await AsyncStorage.getItem("storedArray")
     if (valueOfAsync == null) {
       valueOfAsync = []
